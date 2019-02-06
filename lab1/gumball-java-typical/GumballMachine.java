@@ -3,6 +3,7 @@ public class GumballMachine
     private int num_gumballs;
     private int total_coins;
     private int total_quarters;
+    private int total_refunds;
     //private boolean has_quarter;
 
     public GumballMachine( int size )
@@ -32,13 +33,13 @@ public class GumballMachine
 
         if (this.total_coins < 25)
         {
-            System.out.println("Please insert enough coins.");
+            System.out.println("Please insert enough coins.\n");
         }
         else
         {   // this.total_coin > 25
             if (this.num_gumballs <= 0)
             {
-                System.out.println( "No More Gumballs! We will return you "+ this.total_coins + " cents." ) ;
+                System.out.println( "No More Gumballs! We will return you "+ this.total_coins + " cents.\n" ) ;
             }
             else
             {
@@ -46,11 +47,19 @@ public class GumballMachine
                 if ((type_gumball_machine == 1 && total_quarters >= 25)||(type_gumball_machine == 2 && total_quarters >= 50)||(type_gumball_machine == 3 && total_coins >= 50))
                 {
                     this.num_gumballs --;
-                    System.out.println("Thank you for your coin. Gumball Ejected! ");
+                    if (type_gumball_machine == 1)
+                    {
+                      this.total_refunds = this.total_coins - 25;
+                    }
+                    else
+                    {
+                      this.total_refunds = this.total_coins - 50;
+                    }
+                    System.out.println("Thank you for your coin. Gumball Ejected! And we will return you "+ this.total_refunds + " cents.\n");
                 }
                 else
                 {
-                    System.out.println("Please insert correct or enough coin.");
+                    System.out.println("Please insert correct or enough coin.\n");
                 }
             }
         }
