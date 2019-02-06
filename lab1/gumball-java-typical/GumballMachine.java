@@ -1,43 +1,60 @@
-
 public class GumballMachine
 {
-
     private int num_gumballs;
-    private boolean has_quarter;
+    private int total_coins;
+    private int total_quarters;
+    //private boolean has_quarter;
 
     public GumballMachine( int size )
     {
         // initialise instance variables
         this.num_gumballs = size;
-        this.has_quarter = false;
+        this.total_coins= 0;
+        this.total_quarters = 0;
+        //this.has_quarter = false;
     }
 
-    public void insertQuarter(int coin)
+    public void insertCoin(int num_nickel, int num_penny, int num_dime, int num_quarter)
     {
-        if ( coin == 25 )
-            this.has_quarter = true ;
-        else 
-            this.has_quarter = false ;
+        //Nickel: 1 cent
+        //Penny: 5 cents
+        // Dime: 10 cents
+        // Quarter: 25 cents
+        this.total_quarters = num_quarter * 25;
+        this.total_coins = num_nickel + num_penny * 5 + num_dime * 10 + this.total_quarters;
     }
-    
-    public void turnCrank()
+
+    public void turnCrank(int type_gumball_machine)
     {
-    	if ( this.has_quarter )
-    	{
-    		if ( this.num_gumballs > 0 )
-    		{
-    			this.num_gumballs-- ;
-    			this.has_quarter = false ;
-    			System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
-    		}
-    		else
-    		{
-    			System.out.println( "No More Gumballs!  Sorry, can't return your quarter." ) ;
-    		}
-    	}
-    	else 
-    	{
-    		System.out.println( "Please insert a quarter" ) ;
-    	}        
+        //type_gumball_machine=1: Accepts only Quarters, cost is 25 cents
+        //type_gumball_machine=2: Accepts two Quarters, cost is 50 cents
+        //type_gumball_machine=3: Accepts all coins, cost is 50 cents
+
+        if (this.total_coins < 25)
+        {
+            System.out.println("Please insert enough coins.");
+        }
+        else
+        {   // this.total_coin > 25
+            if (this.num_gumballs <= 0)
+            {
+                System.out.println( "No More Gumballs! We will return you "+ this.total_coins + " cents." ) ;
+            }
+            else
+            {
+                // this.num_gumballs > 0
+                if ((type_gumball_machine == 1 && total_quarters >= 25)||(type_gumball_machine == 2 && total_quarters >= 50)||(type_gumball_machine == 3 && total_coins >= 50))
+                {
+                    this.num_gumballs --;
+                    System.out.println("Thank you for your coin. Gumball Ejected! ");
+                }
+                else
+                {
+                    System.out.println("Please insert correct or enough coin.");
+                }
+            }
+        }
+
+
     }
 }
