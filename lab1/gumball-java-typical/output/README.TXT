@@ -1,0 +1,1 @@
+1. I changed "insertQuarter()" method name to "insertCoin()" method name in order to better understand my method code.
