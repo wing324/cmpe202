@@ -2,8 +2,8 @@
 
 public class NoCoinState implements State {
     GumballMachine gumballMachine;
-    int total_quarters = 0;
-    int total_coins = 0;
+    private int total_quarters = 0;
+    private int total_coins = 0;
 
     public NoCoinState(GumballMachine gumballMachine) {
         this.gumballMachine = gumballMachine;

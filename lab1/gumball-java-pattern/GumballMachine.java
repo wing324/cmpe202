@@ -5,10 +5,10 @@ public class GumballMachine {
 	State hasCoinState;
 	State soldState;
 
-	State state = soldOutState;
-	int count = 0;
-  int type_gumball_machine = 1;
-  String type2S_gumball_machine="";
+	State state = noCoinState;
+	private int count = 0;
+  private int type_gumball_machine = 1;
+  private String type2S_gumball_machine="";
 
 	public GumballMachine(int numberGumballs, int typeGumballMachine) {
 		soldOutState = new SoldOutState(this);
