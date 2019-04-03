@@ -15,6 +15,12 @@ public class Screen implements IScreen, IDisplayComponent
     public void key(String ch, int cnt) {
         chain.key(ch, cnt) ;
     }
+
+    public void deleteKey(int cnt){
+        chain.deleteKey(cnt);
+    }
+
+
     
     public void addSubComponent( IDisplayComponent c )
     {
