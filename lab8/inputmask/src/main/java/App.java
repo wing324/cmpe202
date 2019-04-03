@@ -43,7 +43,7 @@ public class App {
 
     public void key(String ch) {
         ch = ch.trim() ;
-        if( ch==""){
+        if( ch.equals("")){
 
         }else if(ch.toLowerCase().equals("x")){
             screen.deleteKey(count);
