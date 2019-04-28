@@ -1,12 +1,14 @@
 # Screenshots for each machine
 
-#### Machine V1
+### Machine V1
 
 ![V1_1](output/img/V1_1.png)
 
 ![V1_2](output/img/V1_2.png)
 
 ![V1_3](output/img/V1_3.png)
+
+### Machine V2
 
 ![V2_1](output/img/V2_1.png)
 
