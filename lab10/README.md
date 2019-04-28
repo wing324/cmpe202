@@ -2,19 +2,19 @@
 
 #### Machine V1
 
-![V1_1](output\img\V1_1.png)
+![V1_1](output/img/V1_1.png)
 
-![V1_2](output\img\V1_2.png)
+![V1_2](output/img/V1_2.png)
 
-![V1_3](output\img\V1_3.png)
+![V1_3](output/img/V1_3.png)
 
-![V2_1](output\img\V2_1.png)
+![V2_1](output/img/V2_1.png)
 
-![V2_2](output\img\V2_2.png)
+![V2_2](output/img/V2_2.png)
 
-![V2_3](output\img\V2_3.png)
+![V2_3](output/img/V2_3.png)
 
-![V2_4](output\img\V2_4.png)
+![V2_4](output/img/V2_4.png)
 
 
 
